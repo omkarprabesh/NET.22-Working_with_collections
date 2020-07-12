@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace ClassQueue
 {
-    public class QCustom<T> : Queue
+    public class QCustom<T> : Queue where T : class
     {
 
         private int _position;
@@ -26,27 +26,7 @@ namespace ClassQueue
             Console.WriteLine($"{Dequeue()} has been removed from the queue");
         }
     }
-        public class Execute
-        {
-            static void Main()
-            {
-                QCustom<string> CheckList = new QCustom<string>();
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("One");
-                CheckList.Add("Two");
-                CheckList.Remove();
-            foreach (var x in CheckList)
-                    Console.WriteLine(x);
-            }
-        }
-    }
+
+}
 
 
